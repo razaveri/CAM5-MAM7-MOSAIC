@@ -1,0 +1,3 @@
+domain1 = /pic/projects/climate/csmdata//atm/cam/ocnfrac/domain.camocn.1.9x2.5_gx1v6_090403.nc
+file1 = /pic/projects/climate/csmdata//atm/cam/sst/sst_HadOIBl_bc_1.9x2.5_clim_c061031.nc
+domainfile = /pic/projects/climate/csmdata//share/domains/domain.ocn.1.9x2.5_gx1v6_090403.nc

@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+
+<namelist_defaults>
+
+<!-- Solar data from Lean (via Caspar Ammann) -->
+<solar_data_file>atm/cam/solar/spectral_irradiance_Lean_1950-2014_daily_GOME-Mg_Leap_c150623.nc</solar_data_file>
+
+<start_ymd>19870101</start_ymd>
+<restart_option> yearly </restart_option>
+
+<!-- cloud tuning factor -->
+<cldfrc2m_rhmaxi>1.0D0</cldfrc2m_rhmaxi>
+<cldfrc_premit>75000.0D0</cldfrc_premit>
+<cldfrc_rhminh>0.800D0</cldfrc_rhminh>
+<cldfrc_rhminl>0.8900D0</cldfrc_rhminl>
+<cldfrc_rhminl_adj_land>0.000D0</cldfrc_rhminl_adj_land>
+<dust_emis_fact>0.22D0</dust_emis_fact>
+
+<!-- dynamical substepping -->
+<fv_nsplit>12</fv_nsplit>
+<fv_nspltrac>6</fv_nspltrac>
+<fv_nspltvrm>6</fv_nspltvrm>
+
+<!--Species IC -->
+<ncdata dyn="fv"  hgrid="0.9x1.25" >atm/waccm/ic/f.e14.F55W5SC.f09_f09.001.cam.i.1988-01-01-00000.nc</ncdata>
+<ncdata dyn="fv"  hgrid="1.9x2.5" >atm/waccm/ic/b.waccm-tsmlt-mam3_1.9x2.5_L70.cam.i.1987-01-01.c140818.nc</ncdata>
+<ncdata dyn="fv"  hgrid="4x5"     >atm/waccm/ic/f2000.waccm-mam3_4x5_L70.cam2.i.0017-01-01.c121113.nc</ncdata>
+
+<!-- Specified chemistry forcing file; note that the same file is used for ozone. -->
+
+<waccm_forcing_datapath>atm/waccm/ub</waccm_forcing_datapath>
+<waccm_forcing_file>O3_ghg_1979-2014_f.e11.FWTREFC1SD.f19.f19.ccmi30.001.cam.h5zm_c151104.nc</waccm_forcing_file>
+<waccm_forcing_type>SERIAL</waccm_forcing_type>
+
+<prescribed_ozone_datapath>atm/waccm/ub</prescribed_ozone_datapath>
+<prescribed_ozone_file>O3_ghg_1979-2014_f.e11.FWTREFC1SD.f19.f19.ccmi30.001.cam.h5zm_c151104.nc</prescribed_ozone_file>
+<prescribed_ozone_name>O3</prescribed_ozone_name>
+<prescribed_ozone_type>SERIAL</prescribed_ozone_type>
+
+<tracer_cnst_type>     INTERP_MISSING_MONTHS                  </tracer_cnst_type>
+
+<!-- Emissions DEFAULTS OKAY for: airpl_emis_file,ch2o_emis_file,co_emis_file,nox_emis_file-->
+
+<!-- LBC, UBC Files -->
+<flbc_list>'CO2','CH4','N2O','CFC11','CFC12'</flbc_list>
+<flbc_file>atm/waccm/lb/LBC_1765-2500_1.9x2.5_CMIP5_RCP45_za_c120204.nc</flbc_file>
+<flbc_type>'SERIAL'</flbc_type>
+
+<!-- QBO settings -->
+<qbo_use_forcing>.false.</qbo_use_forcing>
+
+<!-- Gravity Wave settings -->
+<effgw_beres_dp>0.5D0</effgw_beres_dp>
+<frontgfc>5.25D-15</frontgfc>
+
+<!-- Kp Ap indices -->
+<solar_parms_file>atm/waccm/solar/wasolar_c150720.nc</solar_parms_file>
+
+<!-- Stratospheric Aerosols: turn off prescribed stratospheric aerosols; use prognostic MAM in the stratosphere -->
+<prescribed_strataero_feedback>.false.</prescribed_strataero_feedback>
+
+<!-- Modal aerosol SAD for stratospheric chemistry -->
+<modal_strat_sulfate>.true.</modal_strat_sulfate>
+<modal_accum_coarse_exch>.true.</modal_accum_coarse_exch>
+
+<!-- emissions -->
+<ext_frc_specifier>
+  'SO2    -> $INPUTDATA_ROOT/atm/cam/chem/emis/ccmi_1960-2008/IPCC_emissions_volc_SO2_1850-2100_1.9x2.5_c141106.nc',
+  'bc_a1  -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_bc_elev_1850-2300_c20150128.nc',
+  'num_a1 -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_num_a1_elev_1850-2300_c20150128.nc',
+  'num_a2 -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_num_a2_elev_1850-2300_c20150128.nc',
+  'pom_a1 -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_pom_elev_1850-2300_c20150128.nc',
+  'so4_a1 -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_so4_a1_elev_1850-2300_c20150128.nc',
+  'so4_a2 -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_so4_a2_elev_1850-2300_c20150128.nc',
+  'SO2    -> $INPUTDATA_ROOT/atm/cam/chem/emis/elev/SO2_emission_OCS_oxidation_elev_1849-2101_WACCM5_c150302.nc'
+  'SO2    -> $INPUTDATA_ROOT/atm/cam/chem/stratvolc/GlobalVolcSO2Emis1850-2015_VolcanEESMv1.0_2deg_c160211.nc'
+</ext_frc_specifier>
+<ext_frc_specifier hgrid="0.9x1.25">
+  'SO2    -> $INPUTDATA_ROOT/atm/cam/chem/emis/ccmi_1960-2008/IPCC_emissions_volc_SO2_1850-2100_1.9x2.5_c141106.nc',
+  'bc_a1  -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_bc_elev_1850-2300_c20150128.nc',
+  'num_a1 -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_num_a1_elev_1850-2300_c20150128.nc',
+  'num_a2 -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_num_a2_elev_1850-2300_c20150128.nc',
+  'pom_a1 -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_pom_elev_1850-2300_c20150128.nc',
+  'so4_a1 -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_so4_a1_elev_1850-2300_c20150128.nc',
+  'so4_a2 -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_so4_a2_elev_1850-2300_c20150128.nc',
+  'SO2    -> $INPUTDATA_ROOT/atm/cam/chem/emis/elev/SO2_emission_OCS_oxidation_elev_1849-2101_WACCM5_c150302.nc'
+  'SO2    -> $INPUTDATA_ROOT/atm/cam/chem/stratvolc/GlobalVolcSO2Emis1850-2015_VolcanEESMv1.0_1deg_c160211.nc'
+</ext_frc_specifier>
+<ext_frc_type>INTERP_MISSING_MONTHS</ext_frc_type>
+
+<!-- Surface emissions -->
+<srf_emis_specifier>
+  'DMS      -> $INPUTDATA_ROOT/atm/cam/chem/emis/ccmi_1950_2100_rcp6/IPCC_emissions_DMS_surface_1850-2100_1.9x2.5_c130814.nc',
+  'SO2      -> $INPUTDATA_ROOT/atm/cam/chem/emis/ccmi_1950_2100_rcp6/IPCC_emissions_SO2_surface_1850-2100_1.9x2.5_c130814.nc',
+  'SOAG     -> $INPUTDATA_ROOT/atm/cam/chem/emis/ccmi_1950_2100_rcp6/IPCC_emissions_SOAG_surface_1850-2100_1.9x2.5_c150128.nc',
+  'bc_a1    -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_bc_surf_1850-2300_c20150128.nc',
+  'num_a1   -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_num_a1_surf_1850-2300_c20150128.nc',
+  'num_a2   -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_num_a2_surf_1850-2300_c20150128.nc',
+  'pom_a1   -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_pom_surf_1850-2300_c20150128.nc',
+  'so4_a1   -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_so4_a1_surf_1850-2300_c20150128.nc',
+  'so4_a2   -> $INPUTDATA_ROOT/atm/cam/chem/trop_mozart_aero/emis/RCP60_mam3_so4_a2_surf_1850-2300_c20150128.nc'
+</srf_emis_specifier>
+<srf_emis_type>INTERP_MISSING_MONTHS</srf_emis_type>
+
+<!-- History Files -->
+<!-- Use default: Monthly mean for h0, nothing else. -->
+
+<!-- Monthly -->
+<fincl1>
+  'CH4', 'H2O', 'N2O', 'CFC11', 'CFC12',
+  'WFRC_O', 'WFRC_O3', 'WFRC_NO', 'WFRC_CO2'
+</fincl1>
+
+<!-- Reduce output size by removing some variables. -->
+<fexcl1>
+  'BTAUN', 'BTAUS', 'BTAUE', 'BTAUW', 'BTAUNET',
+  'BUTEND1', 'BUTEND2', 'BUTEND3', 'BUTEND4', 'BUTEND5',
+  'BUTGWSPEC', 'BVTGWSPEC',
+  'MAXQ0', 'HDEPTH', 'NETDT',
+  'TAUN', 'TAUS', 'TAUE', 'TAUW', 'TAUGWX', 'TAUGWY',
+  'UTEND1', 'UTEND2', 'UTEND3', 'UTEND4', 'UTEND5',
+  'UTGWSPEC', 'VTGWSPEC',
+  'FRONTGF', 'FRONTGFA',
+  'EKGW',
+  'UTGWORO', 'VTGWORO',
+  'QNO', 'QRLNLTE', 'QRL_TOT',
+  'DUV', 'DVV', 'TTPXMLC'
+</fexcl1>
+
+<fexcl2>
+  'PS', 'QRS_TOT', 'T'
+</fexcl2>
+
+<!-- sim_year used for CLM datasets and SSTs forcings -->
+<sim_year>1850-2000</sim_year>
+
+</namelist_defaults>

@@ -1,0 +1,103 @@
+#
+# COMPILER=intel
+# OS=LINUX
+# MACH=constance
+#
+# Makefile Macros generated from /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/cime_config/cesm/machines/config_compilers.xml 
+#
+CPPDEFS+= -DFORTRANUNDERSCORE -DNO_R16 -DLINUX  -DLINUX -DCPRINTEL 
+
+CFLAGS:=  -qno-opt-dynamic-align -fp-model precise -std=gnu99 
+
+CONFIG_ARGS:= --host=Linux 
+
+CXX_LDFLAGS:= -cxxlib 
+
+CXX_LINKER:=FORTRAN
+
+FC_AUTO_R8:= -r8 
+
+FFLAGS:= -qno-opt-dynamic-align -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source  
+
+FFLAGS_NOOPT:= -O0 
+
+FIXEDFLAGS:= -fixed -132 
+
+FREEFLAGS:= -free 
+
+HAS_F2008_CONTIGUOUS:=TRUE
+
+MPICC:= mpicc  
+
+MPICXX:= mpicxx 
+
+MPIFC:= mpif90 
+
+NETCDF_PATH:= $(NETCDF_HOME)
+
+PIO_FILESYSTEM_HINTS:=lustre
+
+SCC:= icc 
+
+SCXX:= icpc 
+
+SFC:= ifort 
+
+SLIBS:= -L$(NETCDF_PATH)/lib -lnetcdf -lnetcdff -lpmi -L$(MKL_PATH) -lmkl_rt
+
+SUPPORTS_CXX:=TRUE
+
+ifeq ($(DEBUG), TRUE) 
+   CFLAGS += -O0 -g 
+   FFLAGS += -g -traceback  -O0 -fpe0 -check  all -check noarg_temp_created -ftrapuv 
+endif
+
+ifeq ($(DEBUG), FALSE) 
+   CFLAGS += -O1 
+   FFLAGS += -O1 
+endif
+
+ifeq ($(compile_threaded), true) 
+   LDFLAGS += -openmp 
+   FFLAGS_NOOPT += -openmp 
+   CFLAGS += -openmp 
+   FFLAGS += -openmp 
+endif
+
+ifeq ($(MPILIB), mpich2) 
+   SLIBS += -mkl=cluster 
+endif
+
+ifeq ($(MPILIB), mpi-serial) 
+   SLIBS += -mkl 
+   FFLAGS += -mcmodel medium 
+endif
+
+ifeq ($(MPILIB), impi) 
+   SLIBS += -mkl=cluster 
+endif
+
+ifeq ($(MPILIB), mpich) 
+   SLIBS += -mkl=cluster 
+endif
+
+ifeq ($(MPILIB), openmpi) 
+   SLIBS += -mkl=cluster 
+endif
+
+ifeq ($(MPILIB), mpt) 
+   SLIBS += -mkl=cluster 
+endif
+
+ifeq ($(MPILIB), mvapich) 
+   SLIBS += -mkl=cluster 
+endif
+
+ifeq ($(MPILIB), mvapich2) 
+   SLIBS += -mkl=cluster 
+endif
+
+ifeq ($(MODEL), pop) 
+   CPPDEFS += -D_USE_FLOW_CONTROL 
+endif
+

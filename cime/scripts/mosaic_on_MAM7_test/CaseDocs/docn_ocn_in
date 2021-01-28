@@ -1,0 +1,11 @@
+&shr_strdata_nml
+ datamode = 'SSTDATA'
+ domainfile = '/pic/projects/climate/csmdata//share/domains/domain.ocn.1.9x2.5_gx1v6_090403.nc'
+ fillalgo = 'nn'
+ fillmask = 'nomask'
+ mapalgo = 'bilinear'
+ mapmask = 'dstmask'
+ streams = "docn.streams.txt.prescribed 1 0 0"
+ taxmode = 'cycle'
+ tintalgo = 'linear'
+/

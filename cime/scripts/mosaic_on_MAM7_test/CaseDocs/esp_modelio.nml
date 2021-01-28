@@ -1,0 +1,7 @@
+&modelio
+ diri = '/pic/scratch/sing201/mosaic_on_MAM7_test/bld/esp'
+ diro = '/pic/scratch/sing201/mosaic_on_MAM7_test/run'
+ logfile = 'esp.log.`date +%y%m%d-%H%M%S`'
+/
+&pio_inparm
+/

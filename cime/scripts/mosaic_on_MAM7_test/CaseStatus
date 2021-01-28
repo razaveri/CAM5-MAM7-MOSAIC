@@ -1,0 +1,8 @@
+create_newcase -case mosaic_on_MAM7_test -mach constance -res f19_f19 -compset FSTRATVBSL45MAM7 -compiler intel -project e3sm
+case created 2021-01-27 14:20:26
+case.setup 2021-01-27 14:22:13
+ 
+build complete 2021-01-27 14:30:31
+
+build complete 2021-01-27 18:16:47
+

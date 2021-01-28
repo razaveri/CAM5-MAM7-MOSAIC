@@ -1,0 +1,149 @@
+&clm_inparm
+ albice = 0.60,0.40
+ co2_type = 'diagnostic'
+ create_crop_landunit = .false.
+ dtime = 1800
+ fatmlndfrc = '/pic/projects/climate/csmdata//share/domains/domain.lnd.fv1.9x2.5_gx1v6.090206.nc'
+ finidat = ' '
+ fsnowaging = '/pic/projects/climate/csmdata//lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc'
+ fsnowoptics = '/pic/projects/climate/csmdata//lnd/clm2/snicardata/snicar_optics_5bnd_c090915.nc'
+ fsurdat = '/pic/projects/climate/csmdata//lnd/clm2/surfdata_map/surfdata_1.9x2.5_16pfts_simyr2000_c160127.nc'
+ glc_do_dynglacier = .false.
+ h2osno_max = 1000.0
+ limit_irrigation = .false.
+ maxpatch_glcmec = 0
+ maxpatch_pft = 17
+ nlevsno = 5
+ nsegspc = 20
+ paramfile = '/pic/projects/climate/csmdata//lnd/clm2/paramdata/clm_params.c160225.nc'
+ repartition_rain_snow = .false.
+ soil_layerstruct = '10SL_3.5m'
+ spinup_state = 0
+ use_bedrock = .false.
+ use_century_decomp = .true.
+ use_cn = .true.
+ use_crop = .false.
+ use_dynroot = .false.
+ use_fertilizer = .false.
+ use_flexiblecn = .false.
+ use_fun = .false.
+ use_grainproduct = .false.
+ use_lch4 = .true.
+ use_luna = .false.
+ use_nguardrail = .false.
+ use_nitrif_denitrif = .true.
+ use_vertsoilc = .true.
+/
+&ndepdyn_nml
+ ndepmapalgo = 'bilinear'
+ stream_fldfilename_ndep = '/pic/projects/climate/csmdata//lnd/clm2/ndepdata/fndep_clm_hist_simyr1849-2006_1.9x2.5_c100428.nc'
+ stream_year_first_ndep = 2000
+ stream_year_last_ndep = 2000
+/
+&popd_streams
+ popdensmapalgo = 'bilinear'
+ stream_fldfilename_popdens = '/pic/projects/climate/csmdata//lnd/clm2/firedata/clmforc.Li_2012_hdm_0.5x0.5_AVHRR_simyr1850-2010_c130401.nc'
+ stream_year_first_popdens = 2000
+ stream_year_last_popdens = 2000
+/
+&light_streams
+ lightngmapalgo = 'bilinear'
+ stream_fldfilename_lightng = '/pic/projects/climate/csmdata//atm/datm7/NASA_LIS/clmforc.Li_2012_climo1995-2011.T62.lnfm_Total_c140423.nc'
+ stream_year_first_lightng = 0001
+ stream_year_last_lightng = 0001
+/
+&lai_streams
+/
+&clm_canopyhydrology_inparm
+ interception_fraction = 0.25
+ maximum_leaf_wetted_fraction = 1.0
+ snowveg_flag = 'OFF'
+ use_clm5_fpi = .false.
+/
+&clm_soilhydrology_inparm
+/
+&dynamic_subgrid
+/
+&finidat_consistency_checks
+/
+&dynpft_consistency_checks
+/
+&clm_initinterp_inparm
+/
+&soilwater_movement_inparm
+ dtmin = 60.
+ expensive = 42
+ flux_calculation = 1
+ inexpensive = 1
+ lower_boundary_condition = 4
+ soilwater_movement_method = 0
+ upper_boundary_condition = 1
+ verysmall = 1.e-8
+ xtolerlower = 1.e-2
+ xtolerupper = 1.e-1
+/
+&rooting_profile_inparm
+ rooting_profile_method = 0
+/
+&soil_resis_inparm
+ soil_resis_method = 0
+/
+&bgc_shared
+ constrain_stress_deciduous_onset = .false.
+ decomp_depth_efolding = 0.5
+/
+&clmu_inparm
+ building_temp_method = 0
+ urban_hac = 'ON'
+ urban_traffic = .false.
+/
+&clm_soilstate_inparm
+ organic_frac_squared = .true.
+/
+&clm_nitrogen
+/
+&clm_snowhydrology_inparm
+ wind_dependent_snow_density = .false.
+/
+&clm_glacier_behavior
+/
+&ch4par_in
+ fin_use_fsat = .false.
+ use_aereoxid_prog = .true.
+/
+&clm_humanindex_inparm
+ calc_human_stress_indices = .false.
+/
+&cnmresp_inparm
+/
+&photosyns_inparm
+ leaf_acc = .false.
+ leafresp_method = 1
+ light_inhibit = .false.
+ rootstem_acc = .false.
+/
+&cnfire_inparm
+ fire_method = 'li2014qianfrc'
+/
+&lifire_inparm
+ boreal_peatfire_c = 4.2d-5
+ bt_max = 0.7d00
+ bt_min = 0.3d00
+ cli_scale = 0.035d00
+ cropfire_a1 = 0.3d00
+ non_boreal_peatfire_c = 0.001d00
+ occur_hi_gdp_tree = 0.39d00
+ pot_hmn_ign_counts_alpha = 0.0035d00
+ rh_hgh = 80.0d00
+ rh_low = 30.0d00
+/
+&clm_canopy_inparm
+ leaf_mr_vcm = 0.015d00
+/
+#!--------------------------------------------------------------------------------------------------------------------------
+#! lnd_in:: Comment:
+#! This namelist was created using the following command-line:
+#!     /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/components/clm/bld/CLM build-namelist -infile /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/Buildconf/clmconf/namelist -csmdata /pic/projects/climate/csmdata/ -inputdata /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/Buildconf/clm.input_data_list -ignore_ic_year -namelist  &clm_inparm  start_ymd=20010101
+#!   / -use_case 2000_control -res 1.9x2.5 -clm_start_type default -envxml_dir /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test -l_ncpl 48 -lnd_frac /pic/projects/climate/csmdata//share/domains/domain.lnd.fv1.9x2.5_gx1v6.090206.nc -glc_nec 0 -co2_ppmv 0.000001 -co2_type diagnostic -config /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/Buildconf/clmconf/config_cache.xml -bgc bgc
+#! For help on options use: /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/components/clm/bld/CLM build-namelist -help
+#!--------------------------------------------------------------------------------------------------------------------------

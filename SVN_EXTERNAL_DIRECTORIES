@@ -1,0 +1,13 @@
+cime                              https://github.com/CESM-Development/cime/tags/cime4.5.15
+components/clm/bld                https://svn-ccsm-models.cgd.ucar.edu/clm2/trunk_tags/clm4_5_8_r178/components/clm/bld
+components/clm/src                https://svn-ccsm-models.cgd.ucar.edu/clm2/trunk_tags/clm4_5_8_r178/components/clm/src
+components/clm/src_clm40          https://svn-ccsm-models.cgd.ucar.edu/clm2/trunk_tags/clm4_5_8_r178/components/clm/src_clm40
+components/clm/cime_config        https://svn-ccsm-models.cgd.ucar.edu/clm2/trunk_tags/clm4_5_8_r178/components/clm/cime_config
+components/cice/bld               https://svn-ccsm-models.cgd.ucar.edu/cice/trunk_tags/cice5_20160614/bld
+components/cice/cime_config       https://svn-ccsm-models.cgd.ucar.edu/cice/trunk_tags/cice5_20160614/cime_config
+components/cice/src/mpi           https://svn-ccsm-models.cgd.ucar.edu/cice/trunk_tags/cice5_20160614/src/mpi
+components/cice/src/source        https://svn-ccsm-models.cgd.ucar.edu/cice/trunk_tags/cice5_20160614/src/source
+components/cice/src/io_pio        https://svn-ccsm-models.cgd.ucar.edu/cice/trunk_tags/cice5_20160614/src/io_pio
+components/cice/src/drivers/cesm  https://svn-ccsm-models.cgd.ucar.edu/cice/trunk_tags/cice5_20160614/src/drivers/cesm
+components/rtm                    https://svn-ccsm-models.cgd.ucar.edu/rivrtm/trunk_tags/rtm1_0_56
+components/aquap                  https://svn-ccsm-models.cgd.ucar.edu/aquap/trunk_tags/aquap_151016

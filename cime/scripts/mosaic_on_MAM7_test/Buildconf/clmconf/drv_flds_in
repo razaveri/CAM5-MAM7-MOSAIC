@@ -1,0 +1,16 @@
+&drydep_inparm
+/
+&megan_emis_nl
+ megan_factors_file = '/pic/projects/climate/csmdata//atm/cam/chem/trop_mozart/emis/megan21_emis_factors_c20120313.nc'
+ megan_specifier = 'ISOP = isoprene', 'C10H16 = pinene_a + carene_3 + thujene_a', 'CH3OH = methanol', 'C2H5OH = ethanol',
+         'CH2O = formaldehyde', 'CH3CHO = acetaldehyde', 'CH3COOH = acetic_acid', 'CH3COCH3 = acetone'
+/
+&fire_emis_nl
+/
+#!--------------------------------------------------------------------------------------------------------------------------
+#! drv_flds_in:: Comment:
+#! This namelist was created using the following command-line:
+#!     /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/components/clm/bld/CLM build-namelist -infile /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/Buildconf/clmconf/namelist -csmdata /pic/projects/climate/csmdata/ -inputdata /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/Buildconf/clm.input_data_list -ignore_ic_year -namelist  &clm_inparm  start_ymd=20010101
+#!   / -use_case 2000_control -res 1.9x2.5 -clm_start_type default -envxml_dir /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test -l_ncpl 48 -lnd_frac /pic/projects/climate/csmdata//share/domains/domain.lnd.fv1.9x2.5_gx1v6.090206.nc -glc_nec 0 -co2_ppmv 0.000001 -co2_type diagnostic -config /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/Buildconf/clmconf/config_cache.xml -bgc bgc
+#! For help on options use: /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/components/clm/bld/CLM build-namelist -help
+#!--------------------------------------------------------------------------------------------------------------------------

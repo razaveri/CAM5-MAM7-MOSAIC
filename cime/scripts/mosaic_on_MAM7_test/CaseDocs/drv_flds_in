@@ -1,0 +1,13 @@
+&drydep_inparm
+ drydep_list		= 'ALKOOH', 'C2H5OH', 'C2H5OOH', 'C3H7OOH', 'CH2O', 'CH3CHO', 'CH3CN', 'CH3COCH3', 'CH3COCHO', 'CH3COOH', 'CH3COOOH', 'CH3OH',
+         'CH3OOH', 'CO', 'EOOH', 'GLYALD', 'H2O2', 'H2SO4', 'HCN', 'HCOOH', 'HNO3', 'HO2NO2', 'HYAC', 'HYDRALD',
+         'ISOPOOH', 'MACROOH', 'MEKOOH', 'MPAN', 'NH3', 'NO', 'NO2', 'O3', 'ONIT', 'ONITR', 'PAN', 'POOH',
+         'Pb', 'ROOH', 'SO2', 'SOA', 'TERPOOH', 'TOLOOH', 'XOOH'
+ drydep_method		= 'xactive_lnd'
+/
+&megan_emis_nl
+/
+&fire_emis_nl
+/
+&carma_inparm
+/

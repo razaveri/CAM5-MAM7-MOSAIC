@@ -1,0 +1,3 @@
+create_newcase -case mosaic_on_MAM7_test -mach constance -res f19_f19 -compset FSTRATVBSL45MAM7 -compiler intel -project e3sm
+
+

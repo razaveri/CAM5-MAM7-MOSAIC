@@ -1,0 +1,10 @@
+megan_factors_file = /pic/projects/climate/csmdata//atm/cam/chem/trop_mozart/emis/megan21_emis_factors_c20120313.nc
+stream_fldfilename_lightng = /pic/projects/climate/csmdata//atm/datm7/NASA_LIS/clmforc.Li_2012_climo1995-2011.T62.lnfm_Total_c140423.nc
+fatmlndfrc = /pic/projects/climate/csmdata//share/domains/domain.lnd.fv1.9x2.5_gx1v6.090206.nc
+fsnowoptics = /pic/projects/climate/csmdata//lnd/clm2/snicardata/snicar_optics_5bnd_c090915.nc
+finidat =  
+fsurdat = /pic/projects/climate/csmdata//lnd/clm2/surfdata_map/surfdata_1.9x2.5_16pfts_simyr2000_c160127.nc
+fsnowaging = /pic/projects/climate/csmdata//lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc
+paramfile = /pic/projects/climate/csmdata//lnd/clm2/paramdata/clm_params.c160225.nc
+stream_fldfilename_popdens = /pic/projects/climate/csmdata//lnd/clm2/firedata/clmforc.Li_2012_hdm_0.5x0.5_AVHRR_simyr1850-2010_c130401.nc
+stream_fldfilename_ndep = /pic/projects/climate/csmdata//lnd/clm2/ndepdata/fndep_clm_hist_simyr1849-2006_1.9x2.5_c100428.nc

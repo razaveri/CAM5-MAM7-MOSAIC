@@ -1,0 +1,12 @@
+&modelio
+ diri = '/pic/scratch/sing201/mosaic_on_MAM7_test/bld/cpl'
+ diro = '/pic/scratch/sing201/mosaic_on_MAM7_test/run'
+ logfile = 'cpl.log.`date +%y%m%d-%H%M%S`'
+/
+&pio_inparm
+ pio_numiotasks = -99
+ pio_rearranger = -99
+ pio_root = -99
+ pio_stride = -99
+ pio_typename = 'nothing'
+/

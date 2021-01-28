@@ -1,0 +1,66 @@
+Setting configuration directory to /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts
+File specifying possible compsets: /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/components/cam/cime_config/config_compsets.xml 
+Primary component (specifies possible compsets, pelayouts and pio settings): cam 
+Compset: 2000_CAM5%SMA7_CLM45%BGC_CICE%PRES_DOCN%DOM_RTM_SGLC_SWAV_SESP 
+grid longname is : a%1.9x2.5_l%1.9x2.5_oi%1.9x2.5_r%r05_m%gx1v6_g%null_w%null
+Found machine "constance" in /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/cime_config/cesm/machines/config_machines.xml 
+Machine compiler specifier: intel
+Machine specifier: constance.
+Set pio settings for constance.
+ConfigPES: grid          is a%1.9x2.5_l%1.9x2.5_oi%1.9x2.5_r%r05_m%gx1v6_g%null_w%null 
+ConfigPES: compset       is 2000_CAM5%SMA7_CLM45%BGC_CICE%PRES_DOCN%DOM_RTM_SGLC_SWAV_SESP 
+ConfigPES: grid match    is a%1.9x2.5 
+ConfigPES: machine match is any
+ConfigPES: compset_match is any
+ConfigPES: pesize match  is any 
+No Match found for NTASKS_ESP, using 48 at /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/utils/perl5lib/Config/ConfigPes.pm line 317.
+No Match found for NTHRDS_ESP, using 1 at /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/utils/perl5lib/Config/ConfigPes.pm line 321.
+No Match found for ROOTPE_ESP, using 0 at /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/utils/perl5lib/Config/ConfigPes.pm line 325.
+Component set: longname 
+  2000_CAM5%SMA7_CLM45%BGC_CICE%PRES_DOCN%DOM_RTM_SGLC_SWAV_SESP 
+Component set Description: 
+  CAM trop_strat_mam7 chemistry: prescribed cice: Stub glc component clm4.5 physics: clm4.5 bgc (cn and methane): RTM: docn data mode: Stub wave component  No ESP component   Stub esp component present day: 
+Grid: 
+  a%1.9x2.5_l%1.9x2.5_oi%1.9x2.5_r%r05_m%gx1v6_g%null_w%null 
+  ATM_GRID = 1.9x2.5  NX_ATM=144 NY_ATM=96 
+  LND_GRID = 1.9x2.5     NX_LND=144 NX_LND=96 
+  ICE_GRID = 1.9x2.5     NX_ICE=144 NX_ICE=96 
+  OCN_GRID = 1.9x2.5     NX_OCN=144 NX_OCN=96 
+  ROF_GRID = r05     NX_ROF=720 NX_ROF=360 
+  GLC_GRID = null    NX_GLC=0 NX_GLC=0 
+  WAV_GRID = null    NX_WAV=0 NX_WAV=0 
+Grid Description: 
+   1.9x2.5 is FV 2-deg grid: r05 is 1/2 degree river routing grid: null is no grid:  gx1v6 is displaced Greenland pole v6 1-deg grid: 
+Non-Default Options: 
+  ATM_NCPL: 48 
+  CAM_CONFIG_OPTS: -phys cam5 -chem trop_strat_mam7 -age_of_air_trcs 
+  CAM_NML_USE_CASE: UNSET 
+  CCSM_BGC: CO2A 
+  CCSM_CCOST: 1 
+  CCSM_CO2_PPMV: 0.000001 
+  CICE_CONFIG_OPTS:  -phys cice5  
+  CICE_MODE: prescribed 
+  CLM_BLDNML_OPTS: -bgc bgc 
+  CLM_CO2_TYPE: diagnostic 
+  CLM_CONFIG_OPTS: -phys clm4_5 
+  CLM_NML_USE_CASE: 2000_control 
+  DOCN_MODE: prescribed 
+  LND_PIO_REARRANGER: 1 
+  RTM_BLDNML_OPTS: -simyr 2000 
+  RTM_NAMELIST_OPTS: rtm_effvel='ACTIVE' 
+  SSTICE_DATA_FILENAME: $DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1.9x2.5_clim_c061031.nc 
+  SSTICE_GRID_FILENAME: $DIN_LOC_ROOT/atm/cam/ocnfrac/domain.camocn.1.9x2.5_gx1v6_090403.nc  
+Compset specifier: FSTRATVBSL45MAM7. 
+Longname: 2000_CAM5%SMA7_CLM45%BGC_CICE%PRES_DOCN%DOM_RTM_SGLC_SWAV_SESP
+Grid is valid for this compset. 
+Machine mpilib specifier: mvapich2.
+Creating /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test 
+Created /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/env_case.xml 
+Created /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/env_mach_pes.xml 
+Created /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/env_build.xml 
+Created /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/env_run.xml 
+Created /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/env_archive.xml 
+Created /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/env_batch.xml 
+Locking file /pic/dtn/sing201/mosaic_sims_from_rudong/cam_collections/labgit_mosaic_cam5_4_75/bsingh_mosaic1x/cime/scripts/mosaic_on_MAM7_test/env_case.xml 
+Successfully created the case for constance 
+create_xml done.

@@ -1,0 +1,6 @@
+&comp_inparm 
+ dtime = 1800 
+ co2vmr = 0.000001e-6
+ start_ymd = 20010101
+ 
+/ 
