@@ -1,7 +1,7 @@
 Example taken from bulletin board forum for "Subversion Issues" in the 
 thread for "Introduction to Subversion"...(070208)
 
-
+ 
 Working with externals:
 
 checkout the HEAD of cam's trunk into working copy directory
